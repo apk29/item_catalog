@@ -1,0 +1,1153 @@
+
+vostro420@Popkorn3 MINGW64 ~
+$ cd /f/documents/programming
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming
+$ dir
+git  html  js  multi_user_blog  mysql  portfolio  python  temp
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming
+$ cd python
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python
+$ cd fullstack
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack (master)
+$ dir
+item_catalog  README.md  vagrant  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack (master)
+$ cd item_catalog
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'hashicorp/precise64' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--                                                                            provision`
+==> default: flag to force provisioning. Provisioners marked to run always will                                                                             still run.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Fri Sep 14 06:23:18 2012 from 10.0.2.2
+vagrant@precise64:~$ python database_setup.py
+python: can't open file 'database_setup.py': [Errno 2] No such file or directory
+vagrant@precise64:~$ ls
+postinstall.sh
+vagrant@precise64:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'hashicorp/precise64' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--                                                                            provision`
+==> default: flag to force provisioning. Provisioners marked to run always will                                                                             still run.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Thu Apr 13 17:32:24 2017 from 10.0.2.2
+vagrant@precise64:~$ ls
+postinstall.sh
+vagrant@precise64:~$ python database_setup.py
+python: can't open file 'database_setup.py': [Errno 2] No such file or directory
+vagrant@precise64:~$ dir
+postinstall.sh
+vagrant@precise64:~$ dir
+postinstall.sh
+vagrant@precise64:~$ ls
+postinstall.sh
+vagrant@precise64:~$ cd ..
+vagrant@precise64:/home$ dir
+vagrant
+vagrant@precise64:/home$ cd..
+cd..: command not found
+vagrant@precise64:/home$ dir
+vagrant
+vagrant@precise64:/home$ ls
+vagrant
+vagrant@precise64:/home$ python database_setup.py
+python: can't open file 'database_setup.py': [Errno 2] No such file or directory
+vagrant@precise64:/home$ cd ..
+vagrant@precise64:/$ dir
+bin   etc         lib         media  proc  sbin     sys  vagrant
+boot  home        lib64       mnt    root  selinux  tmp  var
+dev   initrd.img  lost+found  opt    run   srv      usr  vmlinuz
+vagrant@precise64:/$ cd vagrant
+vagrant@precise64:/vagrant$ dir
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ ls
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ cd ..
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack (master)
+$ cd item_catalog
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ ls
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'hashicorp/precise64' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--                                                                            provision`
+==> default: flag to force provisioning. Provisioners marked to run always will                                                                             still run.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalo                                                                            g (master)
+$ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Thu Apr 13 17:36:39 2017 from 10.0.2.2
+vagrant@precise64:~$ vagrant global-status
+The program 'vagrant' is currently not installed.  You can install it by typing:
+sudo apt-get install vagrant
+vagrant@precise64:~$ vagrant init hashicorp/precise64
+The program 'vagrant' is currently not installed.  You can install it by typing:
+sudo apt-get install vagrant
+vagrant@precise64:~$ sudo apt-get install vagrant
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  build-essential dkms dpkg-dev fakeroot fontconfig fontconfig-config g++ g++-4.6
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasound2 libasyncns0
+  libaudio2 libavahi-client3 libavahi-common-data libavahi-common3 libcaca0 libcups2 libcurl3
+  libdpkg-perl libflac8 libfontconfig1 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgsoap1 libice6
+  libjpeg-turbo8 libjpeg8 libjson0 liblcms1 libllvm3.0 libmng1 libmysqlclient18 libogg0 libpulse0
+  libpython2.7 libqt4-dbus libqt4-declarative libqt4-network libqt4-opengl libqt4-script libqt4-sql
+  libqt4-sql-mysql libqt4-xml libqt4-xmlpatterns libqtcore4 libqtgui4 libreadline5 libruby1.8
+  libsdl1.2debian libsm6 libsndfile1 libstdc++6-4.6-dev libtiff4 libvncserver0 libvorbis0a
+  libvorbisenc2 libx11-xcb1 libxcb-glx0 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxmu6
+  libxrender1 libxt6 libxxf86vm1 make mysql-common patch python-central python2.7 python2.7-minimal
+  qdbus ruby ruby-archive-tar-minitar ruby-childprocess ruby-erubis ruby-ffi ruby-i18n ruby-json
+  ruby-log4r ruby-net-scp ruby-net-ssh ruby1.8 ruby1.8-dev rubygems ttf-dejavu-core virtualbox
+  virtualbox-dkms virtualbox-qt x11-common
+Suggested packages:
+  debian-keyring g++-multilib g++-4.6-multilib gcc-4.6-doc libstdc++6-4.6-dbg libasound2-plugins
+  libasound2-python nas cups-common libglide3 liblcms-utils pulseaudio
+  libqt4-declarative-folderlistmodel libqt4-declarative-gestures libqt4-declarative-particles
+  libqt4-declarative-shaders qt4-qmlviewer libqt4-dev libthai0 qt4-qtconfig libstdc++6-4.6-doc
+  libvncserver0-dbg make-doc diffutils-doc python2.7-doc binfmt-support ri ruby-dev ruby1.8-examples
+  ri1.8 virtualbox-guest-additions-iso vde2
+The following NEW packages will be installed:
+  build-essential dkms dpkg-dev fakeroot fontconfig fontconfig-config g++ g++-4.6
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasound2 libasyncns0
+  libaudio2 libavahi-client3 libavahi-common-data libavahi-common3 libcaca0 libcups2 libcurl3
+  libdpkg-perl libflac8 libfontconfig1 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgsoap1 libice6
+  libjpeg-turbo8 libjpeg8 libjson0 liblcms1 libllvm3.0 libmng1 libmysqlclient18 libogg0 libpulse0
+  libpython2.7 libqt4-dbus libqt4-declarative libqt4-network libqt4-opengl libqt4-script libqt4-sql
+  libqt4-sql-mysql libqt4-xml libqt4-xmlpatterns libqtcore4 libqtgui4 libreadline5 libruby1.8
+  libsdl1.2debian libsm6 libsndfile1 libstdc++6-4.6-dev libtiff4 libvncserver0 libvorbis0a
+  libvorbisenc2 libx11-xcb1 libxcb-glx0 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxmu6
+  libxrender1 libxt6 libxxf86vm1 make mysql-common patch python-central qdbus ruby
+  ruby-archive-tar-minitar ruby-childprocess ruby-erubis ruby-ffi ruby-i18n ruby-json ruby-log4r
+  ruby-net-scp ruby-net-ssh ruby1.8 ruby1.8-dev rubygems ttf-dejavu-core vagrant virtualbox
+  virtualbox-dkms virtualbox-qt x11-common
+The following packages will be upgraded:
+  python2.7 python2.7-minimal
+2 upgraded, 94 newly installed, 0 to remove and 64 not upgraded.
+Need to get 69.6 MB of archives.
+After this operation, 220 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libasound2 amd64 1.0.25-1ubuntu10.1
+  404  Not Found [IP: 91.189.91.23 80]
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main libasyncns0 amd64 0.8-4 [13.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise/main x11-common all 1:7.6+12ubuntu1 [57.7 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise/main libice6 amd64 2:1.0.7-2build1 [46.1 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/main libsm6 amd64 2:1.2.0-2build1 [18.1 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/main libxt6 amd64 1:1.1.1-2build1 [186 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ precise/main libaudio2 amd64 1.9.3-4 [56.9 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ precise/main libavahi-common-data amd64 0.6.30-5ubuntu2 [22.2                                                    kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ precise/main libavahi-common3 amd64 0.6.30-5ubuntu2 [25.5 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ precise/main libavahi-client3 amd64 0.6.30-5ubuntu2 [30.3 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ precise/main libcaca0 amd64 0.99.beta17-2.1ubuntu2 [246 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libcups2 amd64 1.5.3-0ubuntu4
+  404  Not Found [IP: 91.189.91.23 80]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ precise/main libcurl3 amd64 7.22.0-3ubuntu4 [237 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ precise/main libogg0 amd64 1.2.2~dfsg-1ubuntu1 [17.2 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ precise/main libflac8 amd64 1.2.1-6 [144 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ precise/main ttf-dejavu-core all 2.33-2ubuntu1 [1,552 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main fontconfig-config all 2.8.0-3ubuntu9.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libfontconfig1 amd64 2.8.0-3ubuntu9.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libglapi-mesa amd64 8.0.3+8.0.2-0ubuntu3.2
+  404  Not Found [IP: 91.189.91.23 80]
+Get:15 http://us.archive.ubuntu.com/ubuntu/ precise/main libx11-xcb1 amd64 2:1.4.99.1-0ubuntu2 [10.3 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu/ precise/main libxcb-glx0 amd64 1.8.1-1 [26.4 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu/ precise/main libxdamage1 amd64 1:1.1.3-2build1 [7,560 B]
+Get:18 http://us.archive.ubuntu.com/ubuntu/ precise/main libxfixes3 amd64 1:5.0-4ubuntu4 [12.6 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu/ precise/main libxxf86vm1 amd64 1:1.1.1-2build1 [11.6 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libgl1-mesa-glx amd64 8.0.3+8.0.2-0ubuntu3.                                                   2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libjpeg-turbo8 amd64 1.1.90+svn733-0ubuntu4                                                   .1
+  404  Not Found [IP: 91.189.91.23 80]
+Get:20 http://us.archive.ubuntu.com/ubuntu/ precise/main liblcms1 amd64 1.19.dfsg-1ubuntu3 [106 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu/ precise/main libllvm3.0 amd64 3.0-4ubuntu1 [7,456 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu/ precise/main libjpeg8 amd64 8c-2ubuntu7 [2,112 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu/ precise/main libmng1 amd64 1.0.10-3 [215 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-common all 5.5.24-0ubuntu0.12.04.1
+  404  Not Found [IP: 91.189.91.23 80]
+Get:24 http://us.archive.ubuntu.com/ubuntu/ precise/main libjson0 amd64 0.9-1ubuntu1 [16.3 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu/ precise/main libvorbis0a amd64 1.3.2-1ubuntu3 [103 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu/ precise/main libvorbisenc2 amd64 1.3.2-1ubuntu3 [136 kB]
+Err http://security.ubuntu.com/ubuntu/ precise-security/main mysql-common all 5.5.24-0ubuntu0.12.04.1
+  404  Not Found [IP: 91.189.88.161 80]
+Get:27 http://us.archive.ubuntu.com/ubuntu/ precise/main libsndfile1 amd64 1.0.25-4 [163 kB]
+Err http://security.ubuntu.com/ubuntu/ precise-security/main libmysqlclient18 amd64 5.5.24-0ubuntu0.12.04                                                   .1
+  404  Not Found [IP: 91.189.88.161 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libpulse0 amd64 1:1.1-0ubuntu15.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqtcore4 amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-xml amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-dbus amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-network amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-script amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-sql amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-xmlpatterns amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main fontconfig amd64 2.8.0-3ubuntu9.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libtiff4 amd64 3.9.5-2ubuntu1.2
+  404  Not Found [IP: 91.189.91.23 80]
+Get:28 http://us.archive.ubuntu.com/ubuntu/ precise/main libxi6 amd64 2:1.6.0-0ubuntu2 [30.1 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu/ precise/main libxrender1 amd64 1:0.9.6-2build1 [20.2 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqtgui4 amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-declarative amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-opengl amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libqt4-sql-mysql amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Get:30 http://us.archive.ubuntu.com/ubuntu/ precise/main libreadline5 amd64 5.2-11 [128 kB]
+Err http://security.ubuntu.com/ubuntu/ precise-security/main libtiff4 amd64 3.9.5-2ubuntu1.2
+  404  Not Found [IP: 91.189.88.161 80]
+Get:31 http://us.archive.ubuntu.com/ubuntu/ precise/main libsdl1.2debian amd64 1.2.14-6.4ubuntu3 [197 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu/ precise/main libxcursor1 amd64 1:1.1.12-1 [22.6 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu/ precise/main libxinerama1 amd64 2:1.1.1-3build1 [8,022 B]
+Get:34 http://us.archive.ubuntu.com/ubuntu/ precise/main libxmu6 amd64 2:1.1.0-3 [52.7 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main python2.7 amd64 2.7.3-0ubuntu3.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main python2.7-minimal amd64 2.7.3-0ubuntu3.1
+  404  Not Found [IP: 91.189.91.23 80]
+Get:35 http://us.archive.ubuntu.com/ubuntu/ precise/main libstdc++6-4.6-dev amd64 4.6.3-1ubuntu5 [1,660 k                                                   B]
+Get:36 http://us.archive.ubuntu.com/ubuntu/ precise/main g++-4.6 amd64 4.6.3-1ubuntu5 [6,954 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu/ precise/main g++ amd64 4:4.6.3-1ubuntu5 [1,442 B]
+Get:38 http://us.archive.ubuntu.com/ubuntu/ precise/main make amd64 3.81-8.1ubuntu1 [118 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu/ precise/main libdpkg-perl all 1.16.1.2ubuntu7 [181 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu/ precise/main patch amd64 2.6.1-3 [80.2 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu/ precise/main dpkg-dev all 1.16.1.2ubuntu7 [468 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main build-essential amd64 11.5ubuntu2.1 [5,8                                                   16 B]
+Get:43 http://us.archive.ubuntu.com/ubuntu/ precise/main dkms all 2.2.0.3-1ubuntu3 [73.1 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu/ precise/main fakeroot amd64 1.18.2-1 [87.2 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-diff-perl all 1.19.02-2 [50.7 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-diff-xs-perl amd64 0.04-2build2 [12                                                   .4 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-merge-perl all 0.08-2 [12.7 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libgl1-mesa-dri amd64 8.0.3+8.0.2-0ubuntu3.                                                   2
+  404  Not Found [IP: 91.189.91.23 80]
+Get:48 http://us.archive.ubuntu.com/ubuntu/ precise/universe libgsoap1 amd64 2.8.4-2 [507 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libpython2.7 amd64 2.7.3-0ubuntu3.1
+  404  Not Found [IP: 91.189.91.23 80]
+Get:49 http://us.archive.ubuntu.com/ubuntu/ precise/main libruby1.8 amd64 1.8.7.352-2ubuntu1 [1,793 kB]
+Get:50 http://us.archive.ubuntu.com/ubuntu/ precise/main libvncserver0 amd64 0.9.8.2-2ubuntu1 [186 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu/ precise-updates/universe python-central all 0.6.17ubuntu2 [41                                                   .4 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/main qdbus amd64 4:4.8.1-0ubuntu4.2
+  404  Not Found [IP: 91.189.91.23 80]
+Get:52 http://us.archive.ubuntu.com/ubuntu/ precise/main ruby1.8 amd64 1.8.7.352-2ubuntu1 [34.3 kB]
+Get:53 http://us.archive.ubuntu.com/ubuntu/ precise/main ruby all 4.8 [5,054 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-archive-tar-minitar all 0.5.2-2 [15.8 k                                                   B]
+Get:55 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-ffi amd64 1.0.11debian-3 [133 kB]
+Get:56 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-childprocess all 0.3.1-1 [18.0 kB]
+Get:57 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-erubis all 2.7.0-1 [117 kB]
+Get:58 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-i18n all 0.6.0-1 [38.1 kB]
+Get:59 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-json amd64 1.6.3-1 [73.3 kB]
+Get:60 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-log4r all 1.1.9-1 [111 kB]
+Get:61 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-net-ssh all 1:2.2.1-1 [83.5 kB]
+Get:62 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-net-scp all 1.0.4-1build1 [13.3 kB]
+Get:63 http://us.archive.ubuntu.com/ubuntu/ precise/main ruby1.8-dev amd64 1.8.7.352-2ubuntu1 [632 kB]
+Get:64 http://us.archive.ubuntu.com/ubuntu/ precise/main rubygems all 1.8.15-1 [445 kB]
+Get:65 http://us.archive.ubuntu.com/ubuntu/ precise/universe vagrant all 1.0.1-1 [115 kB]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/universe virtualbox amd64 4.1.12-dfsg-2ubuntu0.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/universe virtualbox-dkms all 4.1.12-dfsg-2ubuntu                                                   0.1
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://us.archive.ubuntu.com/ubuntu/ precise-updates/universe virtualbox-qt amd64 4.1.12-dfsg-2ubuntu                                                   0.1
+  404  Not Found [IP: 91.189.91.23 80]
+Fetched 25.4 MB in 39s (648 kB/s)
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/alsa-lib/libasound2_1.0.25-1ubuntu10.1_am                                                   d64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/c/cups/libcups2_1.5.3-0ubuntu4_amd64.deb  4                                                   04  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig-config_2.8.0-3ubunt                                                   u9.1_all.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/libfontconfig1_2.8.0-3ubuntu9.                                                   1_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/m/mesa/libglapi-mesa_8.0.3+8.0.2-0ubuntu3.2                                                   _amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/m/mesa/libgl1-mesa-glx_8.0.3+8.0.2-0ubuntu3                                                   .2_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_1.1.90+sv                                                   n733-0ubuntu4.1_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-common_5.5.24-0ubuntu0.12.0                                                   4.1_all.deb  404  Not Found [IP: 91.189.88.161 80]
+Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/libmysqlclient18_5.5.24-0ubuntu0.                                                   12.04.1_amd64.deb  404  Not Found [IP: 91.189.88.161 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/pulseaudio/libpulse0_1.1-0ubuntu15.1_amd6                                                   4.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqtcore4_4.8.1-0ubuntu4.2_amd64                                                   .deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-xml_4.8.1-0ubuntu4.2_amd64                                                   .deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-dbus_4.8.1-0ubuntu4.2_amd6                                                   4.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-network_4.8.1-0ubuntu4.2_a                                                   md64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-script_4.8.1-0ubuntu4.2_am                                                   d64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-sql_4.8.1-0ubuntu4.2_amd64                                                   .deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-xmlpatterns_4.8.1-0ubuntu4                                                   .2_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.8.0-3ubuntu9.1_am                                                   d64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/t/tiff/libtiff4_3.9.5-2ubuntu1.2_amd64.deb  4                                                   04  Not Found [IP: 91.189.88.161 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqtgui4_4.8.1-0ubuntu4.2_amd64.                                                   deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-declarative_4.8.1-0ubuntu4                                                   .2_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-opengl_4.8.1-0ubuntu4.2_am                                                   d64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/libqt4-sql-mysql_4.8.1-0ubuntu4.2                                                   _amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.3-0ubuntu3.1_amd6                                                   4.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7-minimal_2.7.3-0ubuntu                                                   3.1_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/m/mesa/libgl1-mesa-dri_8.0.3+8.0.2-0ubuntu3                                                   .2_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7_2.7.3-0ubuntu3.1_a                                                   md64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/qdbus_4.8.1-0ubuntu4.2_amd64.deb                                                     404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/universe/v/virtualbox/virtualbox_4.1.12-dfsg-2ub                                                   untu0.1_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/universe/v/virtualbox/virtualbox-dkms_4.1.12-dfs                                                   g-2ubuntu0.1_all.deb  404  Not Found [IP: 91.189.91.23 80]
+Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/universe/v/virtualbox/virtualbox-qt_4.1.12-dfsg-                                                   2ubuntu0.1_amd64.deb  404  Not Found [IP: 91.189.91.23 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+vagrant@precise64:~$ vagrant ssh
+The program 'vagrant' is currently not installed.  You can install it by typing:
+sudo apt-get install vagrant
+vagrant@precise64:~$ python database_setup.py
+python: can't open file 'database_setup.py': [Errno 2] No such file or directory
+vagrant@precise64:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ dir
+database_setup.py  Vagrantfile
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'hashicorp/precise64' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ vagrant sshe
+Usage: vagrant [options] <command> [<args>]
+
+    -v, --version                    Print the version and exit.
+    -h, --help                       Print this help.
+
+Common commands:
+     box             manages boxes: installation, removal, etc.
+     connect         connect to a remotely shared Vagrant environment
+     destroy         stops and deletes all traces of the vagrant machine
+     global-status   outputs status Vagrant environments for this user
+     halt            stops the vagrant machine
+     help            shows the help for a subcommand
+     init            initializes a new Vagrant environment by creating a Vagrantfile
+     login           log in to HashiCorp's Atlas
+     package         packages a running vagrant environment into a box
+     plugin          manages plugins: install, uninstall, update, etc.
+     port            displays information about guest port mappings
+     powershell      connects to machine via powershell remoting
+     provision       provisions the vagrant machine
+     push            deploys code in this environment to a configured destination
+     rdp             connects to machine via RDP
+     reload          restarts vagrant machine, loads new Vagrantfile configuration
+     resume          resume a suspended vagrant machine
+     share           share your Vagrant environment with anyone in the world
+     snapshot        manages snapshots: saving, restoring, etc.
+     ssh             connects to machine via SSH
+     ssh-config      outputs OpenSSH valid configuration to connect to the machine
+     status          outputs status of the vagrant machine
+     suspend         suspends the machine
+     up              starts and provisions the vagrant environment
+     version         prints current and latest Vagrant version
+
+For help on any individual command run `vagrant COMMAND -h`
+
+Additional subcommands are available, but are either more advanced
+or not commonly used. To see all subcommands, run the command
+`vagrant list-commands`.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ vagrant sshe
+Usage: vagrant [options] <command> [<args>]
+
+    -v, --version                    Print the version and exit.
+    -h, --help                       Print this help.
+
+Common commands:
+     box             manages boxes: installation, removal, etc.
+     connect         connect to a remotely shared Vagrant environment
+     destroy         stops and deletes all traces of the vagrant machine
+     global-status   outputs status Vagrant environments for this user
+     halt            stops the vagrant machine
+     help            shows the help for a subcommand
+     init            initializes a new Vagrant environment by creating a Vagrantfile
+     login           log in to HashiCorp's Atlas
+     package         packages a running vagrant environment into a box
+     plugin          manages plugins: install, uninstall, update, etc.
+     port            displays information about guest port mappings
+     powershell      connects to machine via powershell remoting
+     provision       provisions the vagrant machine
+     push            deploys code in this environment to a configured destination
+     rdp             connects to machine via RDP
+     reload          restarts vagrant machine, loads new Vagrantfile configuration
+     resume          resume a suspended vagrant machine
+     share           share your Vagrant environment with anyone in the world
+     snapshot        manages snapshots: saving, restoring, etc.
+     ssh             connects to machine via SSH
+     ssh-config      outputs OpenSSH valid configuration to connect to the machine
+     status          outputs status of the vagrant machine
+     suspend         suspends the machine
+     up              starts and provisions the vagrant environment
+     version         prints current and latest Vagrant version
+
+For help on any individual command run `vagrant COMMAND -h`
+
+Additional subcommands are available, but are either more advanced
+or not commonly used. To see all subcommands, run the command
+`vagrant list-commands`.
+
+vostro420@Popkorn3 MINGW64 /f/documents/programming/python/fullstack/item_catalog (master)
+$ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Thu Apr 13 17:41:45 2017 from 10.0.2.2
+vagrant@precise64:~$ python database_setup.py
+python: can't open file 'database_setup.py': [Errno 2] No such file or directory
+vagrant@precise64:~$ ls
+postinstall.sh
+vagrant@precise64:~$ cd ..
+vagrant@precise64:/home$ dir
+vagrant
+vagrant@precise64:/home$ ls
+vagrant
+vagrant@precise64:/home$ cd vagrant
+vagrant@precise64:~$ ls
+postinstall.sh
+vagrant@precise64:~$ cd ..
+vagrant@precise64:/home$ dir
+vagrant
+vagrant@precise64:/home$ cd ..
+vagrant@precise64:/$ dir
+bin   dev  home        lib    lost+found  mnt  proc  run   selinux  sys  usr      var
+boot  etc  initrd.img  lib64  media       opt  root  sbin  srv      tmp  vagrant  vmlinuz
+vagrant@precise64:/$ cd vagrant
+vagrant@precise64:/vagrant$ dir
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ dir
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ dir
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ ls
+database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ ls venv/lib/python2.7/site-packages/
+ls: cannot access venv/lib/python2.7/site-packages/: No such file or directory
+vagrant@precise64:/vagrant$ python --version
+Python 2.7.3
+vagrant@precise64:/vagrant$ ls venv/lib/python2.7/site-packages/
+ls: cannot access venv/lib/python2.7/site-packages/: No such file or directory
+vagrant@precise64:/vagrant$ pip sqlalchemy
+The program 'pip' is currently not installed.  You can install it by typing:
+sudo apt-get install python-pip
+vagrant@precise64:/vagrant$ sudo apt-get install python-pip
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  python-pkg-resources python-setuptools
+Suggested packages:
+  python-distribute python-distribute-doc
+The following NEW packages will be installed:
+  python-pip python-pkg-resources python-setuptools
+0 upgraded, 3 newly installed, 0 to remove and 66 not upgraded.
+Need to get 599 kB of archives.
+After this operation, 1,647 kB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main python-pkg-resources all 0.6.24-1ubuntu1 [63.1 kB                                                   ]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise/main python-setuptools all 0.6.24-1ubuntu1 [441 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise/universe python-pip all 1.0-1build1 [95.1 kB]
+Fetched 599 kB in 1s (484 kB/s)
+Selecting previously unselected package python-pkg-resources.
+(Reading database ... 51095 files and directories currently installed.)
+Unpacking python-pkg-resources (from .../python-pkg-resources_0.6.24-1ubuntu1_all.deb) ...
+Selecting previously unselected package python-setuptools.
+Unpacking python-setuptools (from .../python-setuptools_0.6.24-1ubuntu1_all.deb) ...
+Selecting previously unselected package python-pip.
+Unpacking python-pip (from .../python-pip_1.0-1build1_all.deb) ...
+Processing triggers for man-db ...
+Setting up python-pkg-resources (0.6.24-1ubuntu1) ...
+Setting up python-setuptools (0.6.24-1ubuntu1) ...
+Setting up python-pip (1.0-1build1) ...
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ pip install psycopg2
+Downloading/unpacking psycopg2
+  Downloading psycopg2-2.7.1.tar.gz (421Kb): 421Kb downloaded
+  Running setup.py egg_info for package psycopg2
+
+    Error: pg_config executable not found.
+
+    Please add the directory containing pg_config to the PATH
+    or specify the full executable path with the option:
+
+        python setup.py build_ext --pg-config /path/to/pg_config build ...
+
+    or with the pg_config option in 'setup.cfg'.
+    Complete output from command python setup.py egg_info:
+    running egg_info
+
+creating pip-egg-info/psycopg2.egg-info
+
+writing pip-egg-info/psycopg2.egg-info/PKG-INFO
+
+writing top-level names to pip-egg-info/psycopg2.egg-info/top_level.txt
+
+writing dependency_links to pip-egg-info/psycopg2.egg-info/dependency_links.txt
+
+writing manifest file 'pip-egg-info/psycopg2.egg-info/SOURCES.txt'
+
+warning: manifest_maker: standard file '-c' not found
+
+
+
+Error: pg_config executable not found.
+
+
+
+Please add the directory containing pg_config to the PATH
+
+or specify the full executable path with the option:
+
+
+
+    python setup.py build_ext --pg-config /path/to/pg_config build ...
+
+
+
+or with the pg_config option in 'setup.cfg'.
+
+----------------------------------------
+Command python setup.py egg_info failed with error code 1
+Storing complete log in /home/vagrant/.pip/pip.log
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ ls
+build  database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ pip install SQLAlchemy, psycopg2
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 126, in main
+    self.run(options, args)
+  File "/usr/lib/python2.7/dist-packages/pip/commands/install.py", line 195, in run
+    InstallRequirement.from_line(name, None))
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 98, in from_line
+    return cls(req, comes_from, url=url)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 38, in __init__
+    req = pkg_resources.Requirement.parse(req)
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 2582, in parse
+    reqs = list(parse_requirements(s))
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 2507, in parse_requirements
+    line, p, specs = scan_list(VERSION,LINE_END,line,p,(1,2),"version spec")
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 2475, in scan_list
+    raise ValueError("Expected "+item_name+" in",line,"at",line[p:])
+ValueError: ('Expected version spec in', 'SQLAlchemy,', 'at', ',')
+
+Storing complete log in /home/vagrant/.pip/pip.log
+vagrant@precise64:/vagrant$ pip install -r requirements.txt
+Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+Storing complete log in /home/vagrant/.pip/pip.log
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ sl
+The program 'sl' is currently not installed.  You can install it by typing:
+sudo apt-get install sl
+vagrant@precise64:/vagrant$ ls
+build  database_setup.py  Vagrantfile
+vagrant@precise64:/vagrant$ python database_setup.py
+Traceback (most recent call last):
+  File "database_setup.py", line 3, in <module>
+    from sqlalchemy import Column, ForeignKey, Integer, String
+ImportError: No module named sqlalchemy
+vagrant@precise64:/vagrant$ from flask.ext.sqlalchemy import SQLAlchemy
+from: can't read /var/mail/flask.ext.sqlalchemy
+vagrant@precise64:/vagrant$ import sqlalchemy
+The program 'import' can be found in the following packages:
+ * imagemagick
+ * graphicsmagick-imagemagick-compat
+Try: sudo apt-get install <selected package>
+vagrant@precise64:/vagrant$ sudo apt-get install sqlalchemy
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package sqlalchemy
+vagrant@precise64:/vagrant$ sudo pip install flask_sqlalchemy
+Downloading/unpacking flask-sqlalchemy
+  Downloading Flask-SQLAlchemy-2.2.tar.gz (100Kb): 100Kb downloaded
+  Running setup.py egg_info for package flask-sqlalchemy
+
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes/.git'
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+Downloading/unpacking Flask>=0.10 (from flask-sqlalchemy)
+  Downloading Flask-0.12.1.tar.gz (548Kb): 548Kb downloaded
+  Running setup.py egg_info for package Flask
+
+    warning: no previously-included files matching '*.py[co]' found anywhere in distribution
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes'
+Downloading/unpacking SQLAlchemy>=0.8.0 (from flask-sqlalchemy)
+  Downloading SQLAlchemy-1.1.9.tar.gz (5.2Mb): 5.2Mb downloaded
+  Running setup.py egg_info for package SQLAlchemy
+
+    warning: no files found matching '*.jpg' under directory 'doc'
+    warning: no files found matching '*.mako' under directory 'doc'
+    warning: no files found matching 'distribute_setup.py'
+    warning: no files found matching 'sa2to3.py'
+    warning: no files found matching 'ez_setup.py'
+    no previously-included directories found matching 'doc/build/output'
+Downloading/unpacking Werkzeug>=0.7 (from Flask>=0.10->flask-sqlalchemy)
+  Downloading Werkzeug-0.12.1.tar.gz (1.2Mb): 1.2Mb downloaded
+  Running setup.py egg_info for package Werkzeug
+
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes'
+    warning: no previously-included files matching '*.py[cdo]' found anywhere in distribution
+    warning: no previously-included files matching '__pycache__' found anywhere in distribution
+    warning: no previously-included files matching '*.so' found anywhere in distribution
+    warning: no previously-included files matching '*.pyd' found anywhere in distribution
+Downloading/unpacking Jinja2>=2.4 (from Flask>=0.10->flask-sqlalchemy)
+  Downloading Jinja2-2.9.6.tar.gz (437Kb): 437Kb downloaded
+  Running setup.py egg_info for package Jinja2
+
+    warning: no files found matching 'run-tests.py'
+    warning: no files found matching '*' under directory 'custom_fixers'
+    warning: no files found matching '*' under directory 'jinja2/testsuite/res'
+    warning: no previously-included files matching '*' found under directory 'docs/_build'
+    warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+Downloading/unpacking itsdangerous>=0.21 (from Flask>=0.10->flask-sqlalchemy)
+  Downloading itsdangerous-0.24.tar.gz (46Kb): 46Kb downloaded
+  Running setup.py egg_info for package itsdangerous
+
+    warning: no previously-included files matching '*' found under directory 'docs/_build'
+Downloading/unpacking click>=2.0 (from Flask>=0.10->flask-sqlalchemy)
+  Downloading click-6.7.tar.gz (279Kb): 279Kb downloaded
+  Running setup.py egg_info for package click
+
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+    warning: no previously-included files matching '*.pyo' found under directory 'tests'
+    warning: no previously-included files matching '*.pyc' found under directory 'examples'
+    warning: no previously-included files matching '*.pyo' found under directory 'examples'
+    no previously-included directories found matching 'docs/_build'
+Downloading/unpacking MarkupSafe>=0.23 (from Jinja2>=2.4->Flask>=0.10->flask-sqlalchemy)
+  Downloading MarkupSafe-1.0.tar.gz
+  Running setup.py egg_info for package MarkupSafe
+
+Installing collected packages: flask-sqlalchemy, Flask, SQLAlchemy, Werkzeug, Jinja2, itsdangerous, click                                                   , MarkupSafe
+  Running setup.py install for flask-sqlalchemy
+
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes/.git'
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+  Running setup.py install for Flask
+
+    warning: no previously-included files matching '*.py[co]' found anywhere in distribution
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes'
+    Installing flask script to /usr/local/bin
+  Running setup.py install for SQLAlchemy
+    building 'sqlalchemy.cprocessors' extension
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/incl                                                   ude/python2.7 -c lib/sqlalchemy/cextension/processors.c -o build/temp.linux-x86_64-2.7/lib/sqlalchemy/cex                                                   tension/processors.o
+    lib/sqlalchemy/cextension/processors.c:10:20: fatal error: Python.h: No such file or directory
+    compilation terminated.
+    ***************************************************************************
+    command 'gcc' failed with exit status 1
+    WARNING: The C extension could not be compiled, speedups are not enabled.
+    Failure information, if any, is above.
+    Retrying the build without the C extension now.
+    ***************************************************************************
+
+    warning: no files found matching '*.jpg' under directory 'doc'
+    warning: no files found matching '*.mako' under directory 'doc'
+    warning: no files found matching 'distribute_setup.py'
+    warning: no files found matching 'sa2to3.py'
+    warning: no files found matching 'ez_setup.py'
+    no previously-included directories found matching 'doc/build/output'
+    ***************************************************************************
+    WARNING: The C extension could not be compiled, speedups are not enabled.
+    Plain-Python build succeeded.
+    ***************************************************************************
+  Running setup.py install for Werkzeug
+
+    no previously-included directories found matching 'docs/_build'
+    no previously-included directories found matching 'docs/_themes'
+    warning: no previously-included files matching '*.py[cdo]' found anywhere in distribution
+    warning: no previously-included files matching '__pycache__' found anywhere in distribution
+    warning: no previously-included files matching '*.so' found anywhere in distribution
+    warning: no previously-included files matching '*.pyd' found anywhere in distribution
+  Running setup.py install for Jinja2
+
+    warning: no files found matching 'run-tests.py'
+    warning: no files found matching '*' under directory 'custom_fixers'
+    warning: no files found matching '*' under directory 'jinja2/testsuite/res'
+    warning: no previously-included files matching '*' found under directory 'docs/_build'
+    warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+    SyntaxError: ('invalid syntax', ('/usr/local/lib/python2.7/dist-packages/jinja2/asyncfilters.py', 7,                                                    9, 'async def auto_to_seq(value):\n'))
+
+    SyntaxError: ('invalid syntax', ('/usr/local/lib/python2.7/dist-packages/jinja2/asyncsupport.py', 22,                                                    9, 'async def concat_async(async_gen):\n'))
+
+  Running setup.py install for itsdangerous
+
+    warning: no previously-included files matching '*' found under directory 'docs/_build'
+  Running setup.py install for click
+
+    warning: no previously-included files matching '*.pyc' found under directory 'docs'
+    warning: no previously-included files matching '*.pyo' found under directory 'docs'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+    warning: no previously-included files matching '*.pyo' found under directory 'tests'
+    warning: no previously-included files matching '*.pyc' found under directory 'examples'
+    warning: no previously-included files matching '*.pyo' found under directory 'examples'
+    no previously-included directories found matching 'docs/_build'
+  Running setup.py install for MarkupSafe
+
+    building 'markupsafe._speedups' extension
+    gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/incl                                                   ude/python2.7 -c markupsafe/_speedups.c -o build/temp.linux-x86_64-2.7/markupsafe/_speedups.o
+    markupsafe/_speedups.c:12:20: fatal error: Python.h: No such file or directory
+    compilation terminated.
+    ==========================================================================
+    WARNING: The C extension could not be compiled, speedups are not enabled.
+    Failure information, if any, is above.
+    Retrying the build without the C extension now.
+
+
+    ==========================================================================
+    WARNING: The C extension could not be compiled, speedups are not enabled.
+    Plain-Python installation succeeded.
+    ==========================================================================
+Successfully installed flask-sqlalchemy Flask SQLAlchemy Werkzeug Jinja2 itsdangerous click MarkupSafe
+Cleaning up...
+vagrant@precise64:/vagrant$ sudo pip install sqlalchemy
+Requirement already satisfied (use --upgrade to upgrade): sqlalchemy in /usr/local/lib/python2.7/dist-pac                                                   kages
+Cleaning up...
+vagrant@precise64:/vagrant$ python database_setup.py
+vagrant@precise64:/vagrant$ python
+Python 2.7.3 (default, Apr 20 2012, 22:39:59)
+[GCC 4.6.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from sqlalchemy import create_engine
+>>> from salalchemy.orm import sessionmaker
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named salalchemy.orm
+>>> from sqlalchemy.orm import sessionmaker
+>>> from database_setup import Base, Restaurant, MenuItem
+>>> engine = create_engine('sqlite:///restaurantmenu.db')
+>>> Base.metadata.bind = engine
+>>> DBSession = sessionmaker(bind = engine)
+>>> session = DBsession()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'DBsession' is not defined
+>>> session = DBSession()
+>>> myFirstRestaurant = Restaurant(name = "Pizza Palace")
+>>> session.add(myFirstRestaurant)
+>>> session.commit()
+>>> session.query(Restaurant).all()
+[<database_setup.Restaurant object at 0x2c27fd0>]
+>>> cheesepizza = MenuItem(name = "Cheese Pizza", description = "Made with all natural ingredients and fr                                                   esh mozzarella", course = "Entree", price = "$8.99", restaurant = myFirstRestaurant)
+>>> session.add(cheesepizza)
+>>> session.commit()
+>>> session.query(MenuItem).all()
+[<database_setup.MenuItem object at 0x2c27ad0>]
+>>> firstResult = session.query(Restaurant).first()
+>>> fristResult.name
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fristResult' is not defined
+>>> firstResult.name
+u'Pizza Palace'
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>>
+vagrant@precise64:/vagrant$ python lotsofmenus.py
+added menu items!
+vagrant@precise64:/vagrant$ python
+Python 2.7.3 (default, Apr 20 2012, 22:39:59)
+[GCC 4.6.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> session.query(Restaurant).all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'session' is not defined
+>>> session.query(Restaurant).all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'session' is not defined
+>>> DBSession().query(Restaurant).all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'DBSession' is not defined
+>>>
+>>>
+KeyboardInterrupt
+>>> from sqlalchemy import create_engine
+>>> from salalchemy.orm import sessionmaker
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named salalchemy.orm
+>>> from sqlalchemy.orm import sessionmaker
+>>> from database_setup import Base, Restaurant, MenuItem
+>>> engine = create_engine('sqlite:///restaurantmenu.db')
+>>> Base.metadata.bind = engine
+>>> DBSession = sessionmaker(bind = engine)
+>>> session = DBSession()
+>>> myFirstRestaurant = Restaurant(name = "Pizza Palace")
+>>> session.add(myFirstRestaurant)
+>>> session.commit()
+>>> session.query(Restaurant).all()
+[<database_setup.Restaurant object at 0x2ca1790>, <database_setup.Restaurant object at 0x2ca1810>, <datab                                                   ase_setup.Restaurant object at 0x2ca1890>, <database_setup.Restaurant object at 0x2ca1910>, <database_set                                                   up.Restaurant object at 0x2ca19d0>, <database_setup.Restaurant object at 0x2ca1a90>, <database_setup.Rest                                                   aurant object at 0x2ca1b50>, <database_setup.Restaurant object at 0x2ca1c10>, <database_setup.Restaurant                                                    object at 0x2ca1cd0>, <database_setup.Restaurant object at 0x2ca1d90>, <database_setup.Restaurant object                                                    at 0x2c8cfd0>]
+>>> items = session.query(MenuItems).all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'MenuItems' is not defined
+>>>  cheesepizza = MenuItem(name = "Cheese Pizza", description = "Made with all natural ingredients and fr                                                   esh mozzarella", course = "Entree", price = "$8.99", restaurant = myFirstRestaurant)
+  File "<stdin>", line 1
+    cheesepizza = MenuItem(name = "Cheese Pizza", description = "Made with all natural ingredients and fr                                                   esh mozzarella", course = "Entree", price = "$8.99", restaurant = myFirstRestaurant)
+    ^
+IndentationError: unexpected indent
+>>> cheesepizza = MenuItem(name="Cheese Pizza", description = "Made with all natural ingredients and fresh mozzarella", course = "Entree"                   , price = "$8.99", restaurant = myFirstRestaurant0
+...
+...
+...
+...
+KeyboardInterrupt
+>>> cheesepizza = MenuItem(name="Cheese Pizza", description = "Made with all natural ingredients and fresh mozzarella", course = "Entree"                   , price = "$8.99", restaurant = myFirstRestaurant)
+>>> session.add(cheesepizza)
+>>> session.commit()
+>>> session.query(MenuItem).all()
+[<database_setup.MenuItem object at 0x2ca2cd0>, <database_setup.MenuItem object at 0x2ca2d50>, <database_setup.MenuItem object at 0x2ca2d                   d0>, <database_setup.MenuItem object at 0x2ca2e50>, <database_setup.MenuItem object at 0x2ca2ed0>, <database_setup.MenuItem object at 0x2                   ca2f50>, <database_setup.MenuItem object at 0x2ca2fd0>, <database_setup.MenuItem object at 0x2cb00d0>, <database_setup.MenuItem object at                    0x2cb0190>, <database_setup.MenuItem object at 0x2cb0250>, <database_setup.MenuItem object at 0x2cb0310>, <database_setup.MenuItem objec                   t at 0x2cb03d0>, <database_setup.MenuItem object at 0x2cb0490>, <database_setup.MenuItem object at 0x2cb0550>, <database_setup.MenuItem o                   bject at 0x2cb0610>, <database_setup.MenuItem object at 0x2cb06d0>, <database_setup.MenuItem object at 0x2cb0790>, <database_setup.MenuIt                   em object at 0x2cb0850>, <database_setup.MenuItem object at 0x2cb0910>, <database_setup.MenuItem object at 0x2cb09d0>, <database_setup.Me                   nuItem object at 0x2cb0a90>, <database_setup.MenuItem object at 0x2cb0b50>, <database_setup.MenuItem object at 0x2cb0c10>, <database_setu                   p.MenuItem object at 0x2cb0cd0>, <database_setup.MenuItem object at 0x2cb0d90>, <database_setup.MenuItem object at 0x2cb0e50>, <database_                   setup.MenuItem object at 0x2cb0f10>, <database_setup.MenuItem object at 0x2cb0fd0>, <database_setup.MenuItem object at 0x2cb10d0>, <datab                   ase_setup.MenuItem object at 0x2cb1190>, <database_setup.MenuItem object at 0x2cb1250>, <database_setup.MenuItem object at 0x2cb1310>, <d                   atabase_setup.MenuItem object at 0x2cb13d0>, <database_setup.MenuItem object at 0x2cb1490>, <database_setup.MenuItem object at 0x2cb1550>                   , <database_setup.MenuItem object at 0x2cb1610>, <database_setup.MenuItem object at 0x2cb16d0>, <database_setup.MenuItem object at 0x2cb1                   790>, <database_setup.MenuItem object at 0x2ca2390>, <database_setup.MenuItem object at 0x2cb1850>, <database_setup.MenuItem object at 0x                   2cb1910>, <database_setup.MenuItem object at 0x2cb19d0>, <database_setup.MenuItem object at 0x2cb1a90>, <database_setup.MenuItem object a                   t 0x2cb1b50>, <database_setup.MenuItem object at 0x2cb1c10>, <database_setup.MenuItem object at 0x2cb1cd0>, <database_setup.MenuItem obje                   ct at 0x2cb1d90>, <database_setup.MenuItem object at 0x2cb1e50>, <database_setup.MenuItem object at 0x2cb1f10>, <database_setup.MenuItem                    object at 0x2712210>]
+>>> items = session.query(MenuItems).all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'MenuItems' is not defined
+>>> items = session.query(MenuItem).all()
+>>> for item in items:
+...     print item.name
+...
+Cheese Pizza
+Veggie Burger
+French Fries
+Chicken Burger
+Chocolate Cake
+Sirloin Burger
+Root Beer
+Iced Tea
+Grilled Cheese Sandwich
+Veggie Burger
+Chicken Stir Fry
+Peking Duck
+Spicy Tuna Roll
+Nepali Momo
+Beef Noodle Soup
+Ramen
+Pho
+Chinese Dumplings
+Gyoza
+Stinky Tofu
+Veggie Burger
+Tres Leches Cake
+Mushroom risotto
+Honey Boba Shaved Snow
+Cauliflower Manchurian
+Aloo Gobi Burrito
+Veggie Burger
+Shellfish Tower
+Chicken and Rice
+Mom's Spaghetti
+Choc Full O' Mint (Smitten's Fresh Mint Chip ice cream)
+Tonkatsu Ramen
+Lamb Curry
+Chicken Marsala
+Potstickers
+Nigiri Sampler
+Veggie Burger
+Chicken Fried Steak
+Boysenberry Sorbet
+Broiled salmon
+Morels on toast (seasonal)
+Tandoori Chicken
+Veggie Burger
+Spinach Ice Cream
+Super Burrito Al Pastor
+Cachapa
+Chantrelle Toast
+Guanciale Chawanmushi
+Lemon Curd Ice Cream Sandwich
+Cheese Pizza
+>>> veggieBurgers = session.query(MenuItem).filter_by(name = 'Veggie Burger')
+>>> for veggieBurger in veggieBurgers:
+... print veggieBurger.id
+  File "<stdin>", line 2
+    print veggieBurger.id
+        ^
+IndentationError: expected an indented block
+>>> for veggieBurger in veggieBurgers:
+... print veggieBurger.id
+  File "<stdin>", line 2
+    print veggieBurger.id
+        ^
+IndentationError: expected an indented block
+>>> for veggieBurger in veggieBurgers:
+...     print veggieBurger.id
+...     print veggieBurger.price
+...     print veggieBurger.restaurant.name
+...     print "\n"
+...
+2
+$7.50
+Urban Burger
+
+
+10
+$5.99
+Urban Burger
+
+
+21
+$9.50
+Panda Garden
+
+
+27
+$6.80
+Thyme for That Vegetarian Cuisine
+
+
+37
+$7.00
+Andala's
+
+
+43
+$9.50
+Auntie Ann's Diner'
+
+
+>>> UrbanVeggieBurger = session.query(MenuItem).filter_by(id = 10).one()
+>>> print UrbanVeggieBurger.price
+$5.99
+>>> UrbanVeggieBurger.price = '$2.99'
+>>> print UrbanVeggieBurger.price
+$2.99
+>>> session.add(UrbanVeggieBurger)
+>>> session.commit()
+>>> veggieBurgers = session.query(MenuItem).filter_by(name = 'Veggie Burger')
+>>> for veggieBurger in veggieBurgers:
+...     print veggieBurger.id
+...     print veggieBurger.price
+...     print veggieBurger.restaurant.name
+...     print "\n"
+...
+2
+$7.50
+Urban Burger
+
+
+10
+$2.99
+Urban Burger
+
+
+21
+$9.50
+Panda Garden
+
+
+27
+$6.80
+Thyme for That Vegetarian Cuisine
+
+
+37
+$7.00
+Andala's
+
+
+43
+$9.50
+Auntie Ann's Diner'
+
+
+>>> for veggieBurger in veggieBurgers:
+...     if veggieBurger.price != '$2.99':
+...             veggieBurger.price = '$2.99'
+...             session.add(veggieBurger)
+...             session.commit()
+...
+>>> for veggieBurger in veggieBurgers:
+...     print veggieBurger.id
+...     print veggieBurger.price
+...     print veggieBurger.restaurant.name
+...     print "\n"
+...
+2
+$2.99
+Urban Burger
+
+
+10
+$2.99
+Urban Burger
+
+
+21
+$2.99
+Panda Garden
+
+
+27
+$2.99
+Thyme for That Vegetarian Cuisine
+
+
+37
+$2.99
+Andala's
+
+
+43
+$2.99
+Auntie Ann's Diner'
+
+
+>>> spinich = session.query(MenuItem).filter_by(name='Spinich Ice Cream').one()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2820, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+sqlalchemy.orm.exc.NoResultFound: No row was found for one()
+>>> spinach = session.query(MenuItem).filter_by(name='Spinach Ice Cream').one()
+>>> print spinach.restaurant.name
+Auntie Ann's Diner'
+>>> session.delete(spinach)
+>>> session.commit()
+>>> print spinach.restaurant.name
+Auntie Ann's Diner'
+>>> print spinach.restaurant.name
+Auntie Ann's Diner'
+>>> spinach = session.query(MenuItem).filter_by(name='Spinach Ice Cream').one()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2820, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+sqlalchemy.orm.exc.NoResultFound: No row was found for one()
+>>>
