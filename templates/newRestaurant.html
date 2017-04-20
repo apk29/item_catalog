@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> New Restaurant </h1>
+<form action="#" method = 'post'>
+
+<p>Name:</p>
+{% for i in items %}
+	
+		<input type='text' size='30' name='name' placeholder="{{item.name}}">
+{% endfor %}
+
+<input type='text' size='30' name='name'>
+<input type='submit' value='Create'>
+
+</body>	
+</form>
+</html>
