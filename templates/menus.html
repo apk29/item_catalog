@@ -1,3 +1,44 @@
-<h1> Restaurants </h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+</head>
+<body>
+	<div class='header'>
 
-<br>
+	<h1>{{restaurant.name}}</h1>
+
+	</div>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+
+<ul>
+{% for message in messages %}
+  <li><strong>{{message}}</strong></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %
+
+
+<h2><a href = >Create New Item</a></h2>
+<p></p>
+
+<h2>Appetizers</h2>
+<p><ul><li>Spinach Dip</li>
+<li>creamy dip with fresh spinach</li>
+<li>$1.99</li></ul>
+</p>
+
+
+<h2>Entrees</h2>
+<p><ul><li>Cheese Pizza</li>
+<li>made with fresh chees</li>
+<li>$5.99</li></ul>
+</p>
+
+
+
+</body>
+</html>

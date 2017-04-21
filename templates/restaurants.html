@@ -2,7 +2,7 @@
 <body>
 <h1> Restaurants </h1>
 {% for i in restaurants %}
-<a href="{{url_for('showRestaurant', restaurant_id=restaurant.id)}}"><h2>{{i.name}}<h2>
+<a href="{{url_for('showRestaurants', restaurant_id=restaurant.id)}}"><h2>{{i.name}}</h2></a>
 <br>
 {% endfor %}
 <form action="#" method = 'post'>
