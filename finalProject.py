@@ -56,7 +56,7 @@ def editRestaurant(restaurant_id):
 	# return "This page will be for editing restaurant %s" % restaurant_id
 	# return render_template('editRestaurant.html', restaurants=restaurants)
 
-@app.route('/restaurant/<int:restaurant_id>/delete/')
+@app.route('/restaurant/<int:restaurant_id>/delete/', methods=['GET', 'POST'])
 def deleteRestaurant(restaurant_id):
 	RestaurantDelete = session.query(Restaurant).filter_by(id=restaurant_id).one()
 	if request.method == 'POST':
