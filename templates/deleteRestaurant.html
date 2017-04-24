@@ -1,10 +1,14 @@
-<html>
+{% extends "baseTemplate.html" %}
+{% block content %}
 
-<body>
-<h1> Are you sure you want to delete </h1><h2>{{restaurant}}?</h2> 
+
+
+<h1> Are you sure you want to delete </h1><h2>{{restaurant.name}}?</h2> 
+<br>
+<form action="{{ url_for('deleteRestaurant',restaurant_id = restaurant.id)}}" method = 'post'>
 <input type='submit', value = 'Delete'>
 <br>
 <br>
-<a href = '{{url_for('showRestaurants') }}'>Cancel</a>
-</body>
-</html>
+<a href = '{{url_for('showRestaurants') }}'>Cancel Delete</a>
+
+{% endblock %}

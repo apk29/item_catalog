@@ -1,23 +1,37 @@
-
-<body>
-<h1> Restaurants </h1>
-{% for i in restaurants %}
-<a href="{{url_for('showRestaurants', restaurant_id=restaurant.id)}}"><h2>{{i.name}}</h2></a>
-<br>
-{% endfor %}
-<form action="#" method = 'post'>
- <a href='{{url_for('editRestaurant', restaurant_id = restaurant.id)  }}'>Edit Restaurant</a> <!-- This is calling the function in finalproject.py, which in turns, returns the editRestaurant.html. -->
- </br>
- <a href = '{{url_for('deleteRestaurant', restaurant_id = restaurant.id) }}'>Delete Restaurant</a>
-<br>
-  {% for i in items %}
-	<p>Name:</p>
-		<input type='text' size='30' name='name' placeholder='{{item.name}}'>
-{% endfor %}
-<br>
-
-
-
-
-</body>	
-</form>
+{% extends "baseTemplate.html" %}
+{% block content %}
+  
+      <div class="pane">
+         <div class = 'header'>
+            <h1> Restaurants </h1>
+            <a href="{{url_for('newRestaurant')}}">
+               <h3>Create a New Restraurant </h3>
+            </a>
+            <div class = 'flash'>
+               {% with messages = get_flashed_messages() %}
+               {% if messages %}
+               <ul>
+                  {% for message in messages %}
+                  <li><strong>{{message}}</strong></li>
+                  {% endfor %}
+               </ul>
+               {% endif %}
+               {% endwith %}
+            </div>
+            {% for restaurant in restaurants %}
+            <a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">
+               <h2>{{restaurant.name}}</h2>
+            </a>
+            <form action="#" method = 'post'>
+               <a href='{{url_for('editRestaurant',restaurant_id = restaurant.id)}}'>Edit Restaurant</a> 
+               <!-- This is calling the function in finalproject.py, which in turns, returns the editRestaurant.html. -->
+               </br>
+               <a href = '{{url_for('deleteRestaurant',restaurant_id = restaurant.id)}}'>Delete Restaurant</a>
+               <br><br>
+               {% endfor %}
+               <br>
+         </div>
+      </div>
+  
+   </form>
+{% endblock %}
