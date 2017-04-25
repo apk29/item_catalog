@@ -25,7 +25,7 @@
             <form action="#" method = 'post'>
                <a href='{{url_for('editRestaurant',restaurant_id = restaurant.id)}}'>Edit Restaurant</a> 
                <!-- This is calling the function in finalproject.py, which in turns, returns the editRestaurant.html. -->
-               </br>
+               |
                <a href = '{{url_for('deleteRestaurant',restaurant_id = restaurant.id)}}'>Delete Restaurant</a>
                <br><br>
                {% endfor %}

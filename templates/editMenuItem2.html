@@ -1,15 +1,22 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+
 <body>
 <h1> Edit Menu Item </h1>
-<form action="#" method = 'post'>
+<form action="{{url_for('editMenuItem', restaurant_id=restaurant_id, menu_id=
+	item.id )}}" method = 'POST'>
 
 
 
-	<p>Name:</p>
-		<input type='text" size='30' name='name' placeholder="{{item.name}}">
+	<p>Menu Item to Edit:</p>
+		<input type='text' size='30' name='name' placeholder="{{item.name}}">
 
 
 <input type='submit' value='Edit'>
-
-<a href = '#'> Cancel </a>
-</body>	
+<br><br>
+ <a href = '{{url_for('showRestaurants') }}'>Cancel Edit</a>
 </form>
+</body>
+
+
+{% endblock %}

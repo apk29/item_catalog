@@ -1,9 +1,7 @@
 {% extends "baseTemplate.html" %}
 {% block content %}
 
-
-
-<h1> Are you sure you want to delete </h1><h2>{{restaurant.name}}?</h2> 
+<h1> Are you sure you want to delete {{restaurant.name}}?</h1> 
 <br>
 <form action="{{ url_for('deleteRestaurant',restaurant_id = restaurant.id)}}" method = 'post'>
 <input type='submit', value = 'Delete'>

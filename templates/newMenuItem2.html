@@ -1,13 +1,11 @@
-<html>
-<head>
-    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}"> -->
-    </head>
+{% extends "baseTemplate.html" %}
+{% block content %}
 <body>
 
 <h1>New Menu Item</h1>
 
 <div class = 'pane'>
-
+<form action="{{url_for('newMenuItem2', restaurant_id=restaurant_id )}}" method = 'POST'>
 
 <dl>
     <dt>Name:</dt>
@@ -26,14 +24,14 @@
 </dl>
 
 <form>
- Course:<br><br>
+ <!--Course:<br><br>
   <input type="radio" name="colors" id="Appetizer">Appetizer<br>
   <input type="radio" name="colors" id="Entree">Entree<br>
   <input type="radio" name="colors" id="Dessert">Dessert<br>
-  <input type="radio" name="colors" id="Beverage">Beverage<br>
-<br>
-  <input type='submit' value='Create'>
-</form>
+  <input type="radio" name="colors" id="Beverage">Beverage<br>-->
+
+  <input type='submit' value='Create'><br><br><a href = '{{url_for('showMenu') }}'>Cancel Create</a>
+<br><br>
 
 
 
@@ -41,3 +39,4 @@
 </div>
 
 </body>
+{% endblock %}

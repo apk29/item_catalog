@@ -78,25 +78,51 @@ def showMenu(restaurant_id):
 	# return "This page is the menu for restaurant %s" % restaurant_id
 	return render_template('menus.html', items=items, restaurant=restaurant)
 
-@app.route('/restaurant/<int:restaurant_id>/menu/new/')
-def newMenuItem(restaurant_id):
+@app.route('/restaurant/<int:restaurant_id>/menu/new/', methods=['GET', 'POST'])
+def newMenuItem2(restaurant_id):
+	if request.method == 'post':
+		newItem = MenuItem(name=request.form['name'], restaurant_id=restaurant_id)
+		session.add(newItem)
+		session.commit()
+		return redirect('menus.html, restaurant_id=restaurant_id')
+	else:
+		return render_template('newMenuItem2.html', restaurant_id=restaurant_id)
 # 	# restaurant_id = 4
 # 	# return "This page is for making new menu item for retaurant %s" % restaurant_id
-	return render_template('newMenuItem2.html', restaurant=restaurant)
+	# return render_template('newMenuItem2.html', items=items, restaurant=restaurant)
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit/')
 def editMenuItem(restaurant_id, menu_id):
+	editedItem = session.query(MenuItem).filter_by(id=menu_id).one()
+	if request.method == 'POST':
+		if request.form['name']:
+			editedItem.name = request.form['name']
+		session.add(editedItem)
+		session.commit()
+		# flash("Menu Item Edited")
+		return redirect(url_for('showMenu'))
+	else:
+		return render_template('editMenuItem2.html', restaurant_id=restaurant_id, menu_id=menu_id,
+		item = editedItem)
 # 	# restaurant_id = 4
 # 	# menu_id= 5
 # 	# return "This page is for is for editing menu item %s" % menu_id	
-	return render_template('editMenuItem2.html', restaurant=restaurant, item=item)
+	# return render_template('editMenuItem2.html', restaurant=restaurant, item=item)
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete/')
 def deleteMenuItem(restaurant_id, menu_id):
+	deleteItem = session.query(MenuItem).filter_by(id=menu_id).one()
+	if request.method == 'POST':
+		session.delete(deleteItem)
+		session.commit()
+		#flash("menu Item Deleted")
+		return redirect(url_for(showMenu, restaurant_id=restaurant_id, ))
+	else:
+		return render_template('deleteMenuItem2.html', item = deleteItem)
 # 	# restaurant_id = 6
 # 	# menu_id= 7
 # 	# return "This page is for deleting menu item %s" % menu_id
-	return render_template('deleteMenuItem2.html', restaurant=restaurant, item=item)
+	# return render_template('deleteMenuItem2.html', restaurant=restaurant, item=item)
 
 if __name__ == '__main__':
 	app.secret_key = 'super_secret_key'
