@@ -79,31 +79,47 @@ def showMenu(restaurant_id):
 	return render_template('menus.html', items=items, restaurant=restaurant)
 
 @app.route('/restaurant/<int:restaurant_id>/menu/new/', methods=['GET', 'POST'])
-def newMenuItem2(restaurant_id):
-	if request.method == 'post':
-		newItem = MenuItem(name=request.form['name'], restaurant_id=restaurant_id)
+def newMenuItem(restaurant_id):
+	restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
+	if request.method == 'POST':
+		newItem = MenuItem(name=request.form['name'], 
+							description=request.form['description'],
+							price=request.form['price'], 
+							course=request.form['course'], 
+							restaurant_id=restaurant.id)
 		session.add(newItem)
 		session.commit()
-		return redirect('menus.html, restaurant_id=restaurant_id')
+		flash('New Menu %s Item Created' % (newItem.name))
+		return redirect(url_for('showMenu', restaurant_id=restaurant.id))
 	else:
-		return render_template('newMenuItem2.html', restaurant_id=restaurant_id)
+		return render_template('newMenuItem2.html', restaurant=restaurant)
 # 	# restaurant_id = 4
 # 	# return "This page is for making new menu item for retaurant %s" % restaurant_id
 	# return render_template('newMenuItem2.html', items=items, restaurant=restaurant)
 
-@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit/')
+@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit/', methods=['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
 	editedItem = session.query(MenuItem).filter_by(id=menu_id).one()
+	restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
 	if request.method == 'POST':
 		if request.form['name']:
 			editedItem.name = request.form['name']
-		session.add(editedItem)
-		session.commit()
-		# flash("Menu Item Edited")
-		return redirect(url_for('showMenu'))
+		if request.form['description']:
+			editedItem.description = request.form['description']
+        	
+        if request.form['price']:
+            editedItem.price = request.form['price']
+        if request.form['course']:
+            editedItem.course = request.form['course']
+		
+	    session.add(editedItem)
+	    session.commit()
+	    flash("Menu Item Edited")
+	    return redirect(url_for('showMenu', restaurant_id=restaurant_id))
 	else:
-		return render_template('editMenuItem2.html', restaurant_id=restaurant_id, menu_id=menu_id,
-		item = editedItem)
+		return render_template('editMenuItem2.html', restaurant=restaurant, 
+								restaurant_id=restaurant_id, menu_id=menu_id,
+								item = editedItem)
 # 	# restaurant_id = 4
 # 	# menu_id= 5
 # 	# return "This page is for is for editing menu item %s" % menu_id	
@@ -124,7 +140,7 @@ def deleteMenuItem(restaurant_id, menu_id):
 # 	# return "This page is for deleting menu item %s" % menu_id
 	# return render_template('deleteMenuItem2.html', restaurant=restaurant, item=item)
 
-if __name__ == '__main__':
+if __name__ == '__main__':#if called from the command line, it will execute
 	app.secret_key = 'super_secret_key'
-	app.debug = True
-	app.run(host = '0.0.0.0', port = 5000)
+	app.debug = True #debug mode on
+	app.run(host = '0.0.0.0', port = 5000) 

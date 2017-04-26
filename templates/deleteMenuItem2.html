@@ -8,6 +8,6 @@
 <input type='submit', value = 'Delete'>
 <br>
 <br>
-<a href = '{{url_for('showRestaurants')}}'> Cancel Deletion</a>
+<a href = '{{url_for('showMenu', restaurant_id=item.restaurant_id)}}'> Cancel Deletion</a>
 </body>
 {% endblock %}

@@ -23,10 +23,10 @@
                <h2>{{restaurant.name}}</h2>
             </a>
             <form action="#" method = 'post'>
-               <a href='{{url_for('editRestaurant',restaurant_id = restaurant.id)}}'>Edit Restaurant</a> 
+               <a href='{{url_for('editRestaurant',restaurant_id = restaurant.id)}}'>Edit</a> 
                <!-- This is calling the function in finalproject.py, which in turns, returns the editRestaurant.html. -->
                |
-               <a href = '{{url_for('deleteRestaurant',restaurant_id = restaurant.id)}}'>Delete Restaurant</a>
+               <a href = '{{url_for('deleteRestaurant',restaurant_id = restaurant.id)}}'>Delete</a>
                <br><br>
                {% endfor %}
                <br>
