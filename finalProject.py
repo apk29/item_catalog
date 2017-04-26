@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, flash, jso
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
+import random
+import string
+import os
 app = Flask(__name__)
 
 engine = create_engine('sqlite:///restaurantmenu.db')
@@ -115,7 +118,7 @@ def editMenuItem(restaurant_id, menu_id):
 	    session.add(editedItem)
 	    session.commit()
 	    flash("Menu Item Edited")
-	    return redirect(url_for('showMenu', restaurant_id=restaurant_id))
+	    return redirect(url_for('showMenu', restaurant_id=restaurant_id, item=editedItem))
 	else:
 		return render_template('editMenuItem2.html', restaurant=restaurant, 
 								restaurant_id=restaurant_id, menu_id=menu_id,
@@ -125,16 +128,17 @@ def editMenuItem(restaurant_id, menu_id):
 # 	# return "This page is for is for editing menu item %s" % menu_id	
 	# return render_template('editMenuItem2.html', restaurant=restaurant, item=item)
 
-@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete/')
+@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete/', methods=['GET', 'POST'])
 def deleteMenuItem(restaurant_id, menu_id):
+	restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
 	deleteItem = session.query(MenuItem).filter_by(id=menu_id).one()
 	if request.method == 'POST':
 		session.delete(deleteItem)
 		session.commit()
-		#flash("menu Item Deleted")
-		return redirect(url_for(showMenu, restaurant_id=restaurant_id, ))
+		flash("menu Item Deleted")
+		return redirect(url_for('showMenu', restaurant_id=restaurant_id, item=deleteItem ))
 	else:
-		return render_template('deleteMenuItem2.html', item = deleteItem)
+		return render_template('deleteMenuItem2.html', restaurant=restaurant, item = deleteItem)
 # 	# restaurant_id = 6
 # 	# menu_id= 7
 # 	# return "This page is for deleting menu item %s" % menu_id
