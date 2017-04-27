@@ -5,6 +5,7 @@ from database_setup import Base, Restaurant, MenuItem
 import random
 import string
 import os
+
 app = Flask(__name__)
 
 engine = create_engine('sqlite:///restaurantmenu.db')
@@ -103,24 +104,24 @@ def newMenuItem(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit/', methods=['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
 	editedItem = session.query(MenuItem).filter_by(id=menu_id).one()
-	restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
+	# restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
 	if request.method == 'POST':
-		if request.form['name']:
+		if request.form.get('name'):
 			editedItem.name = request.form['name']
-		if request.form['description']:
+		if request.form.get('description'):
 			editedItem.description = request.form['description']
         	
-        if request.form['price']:
-            editedItem.price = request.form['price']
-        if request.form['course']:
+    	if request.form.get('price'):
+    	    editedItem.price = request.form['price']
+    	if request.form.get('course'):
             editedItem.course = request.form['course']
 		
 	    session.add(editedItem)
 	    session.commit()
 	    flash("Menu Item Edited")
-	    return redirect(url_for('showMenu', restaurant_id=restaurant_id, item=editedItem))
+	    return redirect(url_for('showMenu', restaurant_id=restaurant_id))
 	else:
-		return render_template('editMenuItem2.html', restaurant=restaurant, 
+		return render_template('editMenuItem2.html',  
 								restaurant_id=restaurant_id, menu_id=menu_id,
 								item = editedItem)
 # 	# restaurant_id = 4

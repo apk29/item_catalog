@@ -1,5 +1,6 @@
 {% extends "baseTemplate.html" %}
 {% block content %}
+
 {% with messages = get_flashed_messages(category_filter=["message"]) %}
 {% if messages %}
 <div class="alert alert-success">
@@ -9,47 +10,49 @@
 </div>
 {% endif %}
 {% endwith %}
+
 <h1> Edit Menu Item </h1>
-<form action="{{ url_for('editMenuItem',restaurant_id = item.restaurant_id,
- menu_id=item.id)}}" method = 'POST'>
-    <div class="row">
-    <div class="col-md-6 col-md-offset-1">
-<form method = "POST">
-    <div class="form-group">
-    <label for="name">Name:</label>
-    <input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
-    <br>
-    <label for="description">Description:</label>
-    <textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
-    <br>
-    <label for="price">Price:</label>
-    <div class="input-group">
-        <div class="input-group-addon">$</div>
-        <input type ="text" maxlength="10" class="form-control" name="price" value="{{item.price}}">
-    </div>
-    <br>
-    <label for="course">Course:</label>
-    <div class="radio">
-        <label>
-        <input type="radio" name="course" id="course1" value="Appetizer" 
-        {% if item.course == 'Appetizer'%}
-        checked {% endif %}>Appetizer</label>
-    </div>
-    <div class="radio">
-        <label>
-        <input type="radio" name="course" id="course2" value="Entree"
-        {% if item.course == 'Entree' % } checked {% endif %}> Entree </label>
-    </div>
-    <div class="radio">
-        <label>
-        <input type="radio" name="course" id="course3" value="Dessert" 
-        {% if item.course == 'Dessert'%} checke d{% endi f%}>Dessert </label>
-    </div>
-    <div class="radio">
-        <label>
-        <input type="radio" name="course" id="course4" value="Beverage" 
-        {%if item.course =='Beverage'%} checked {%endif%}> Beverage </label>
-    </div>
-    <br>
-</form>
+<form action="#" method = 'post'>
+
+
+    <p>Name:</p>
+        <input type ='text' size='30' name='name' placeholder = '{{item.name }}'>
+    <p>Description:</p>
+        <input type ='text' size='30' name='description' placeholder = '{{item.description}}'>
+    <p>Price:</p>
+        <input type ='text' size='30' name='price' placeholder = '{{item.price}}'>
+    <p>Course:<p>
+
+    {% if item.course == 'Appetizer' %}
+        <p><input type ='radio' name='course' value='Appetizer'checked >Appetizer</p>
+    {%else%}
+    <p><input type ='radio' name='course' value='Appetizer' >Appetizer</p>
+    {% endif %}
+
+    {% if item.course == 'Entree' %}
+       <p><input type ='radio' name='course' value='Entree' checked>Entree</p>
+
+    {% else %}
+        <p><input type ='radio' name='course' value='Entree'>Entree</p>
+    {% endif %}
+
+    {% if item.course == 'Dessert' %}
+        <p><input type ='radio' name='course' value='Dessert'checked >Dessert</p>
+
+    {% else %}
+       <p><input type ='radio' name='course' value='Dessert'>Dessert</p>
+
+    {% endif %}
+    {% if item.course =='Beverage' %}
+        <p><input type ='radio' name='course' value='Beverage'checked >Beverage</p>
+    {% else %}
+        <p><input type ='radio' name='course' value='Beverage'>Beverage</p>
+    {% endif %}
+
+
+
+<input type='submit' value='Edit'>
+
+
+<a href = '{{url_for('showMenu', restaurant_id=item.restaurant_id)}}'> Cancel</a>
 {% endblock %}

@@ -17,7 +17,7 @@
 </div>
 <h1>Appetizers</h1>
 {% for i in items %}
-<p>{% if i.course == 'Appetizer' %}</p>
+{% if i.course == 'Appetizer' %}
 <p>{{i.name}}</p>
 <p>{{i.description}}</p>
 <p>{{i.price}}</p>
