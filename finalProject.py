@@ -24,6 +24,34 @@ session = DBSession()
 # items = [ {'name':'Cheese Pizza', 'description':'made with fresh cheese', 'price':'$5.99','course' :'Entree', 'id':'1'}, {'name':'Chocolate Cake','description':'made with Dutch Chocolate', 'price':'$3.99', 'course':'Dessert','id':'2'},{'name':'Caesar Salad', 'description':'with fresh organic vegetables','price':'$5.99', 'course':'Entree','id':'3'},{'name':'Iced Tea', 'description':'with lemon','price':'$.99', 'course':'Beverage','id':'4'},{'name':'Spinach Dip', 'description':'creamy dip with fresh spinach','price':'$1.99', 'course':'Appetizer','id':'5'} ]
 # item =  {'name':'Cheese Pizza','description':'made with fresh cheese','price':'$5.99','course' :'Entree', 'id': '1'}
 
+# Show all restaurants, JSON
+@app.route('/')
+@app.route('/restaurant/JSON')
+def restaurantJSON():
+	restaurants = session.query(Restaurant).all()
+	if restaurants == []:
+		return render_template('norestaurant.html')
+	else:
+		return render_template('restaurants.html', restaurants=restaurants)
+	# jsonObj = jsonify(Restaurant = [restaurant.serialize 
+ #        for restaurant in restaurants ])
+	# return jsonObj
+
+#New Restaurant, JSON    
+@app.route('/restaurants/<int:restaurant_id>/menu/JSON')
+def restaurantMenuJSON(restaurant_id):
+	restaurant = session.query(Restaurant).filter_by(
+        id=restaurant_id).one()
+	items = session.query(MenuItem).filter_by(
+		restaurant_id=restaurant_id).all()
+	return jsonify(MenuItems=[i.serialize for i in items])
+
+#Edit Restaurant, JSON
+@app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/JSON')
+def menuItemJSON(restaurant_id, menu_id):
+    menuItem = session.query(MenuItem).filter_by(id=restaurant_id).one()
+    return jsonify(MenuItems=menuItem.serialize)
+
 @app.route('/')
 @app.route('/restaurant/')
 def showRestaurants():
